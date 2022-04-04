@@ -4,7 +4,21 @@ let tuits = posts;
 const createTuit = (req, res) => {
     const newTuit = req.body;
     newTuit._id = (new Date()).getTime()+'';
-    newTuit.likes = 0;
+    newTuit.postedBy = {
+        "username": "Elon Musk"
+    };
+    newTuit.liked = false;
+    newTuit.verified = false;
+    newTuit.handle = "elonmusk";
+    newTuit.time = "now";
+    newTuit.avatar_image = "https://pbs.twimg.com/profile_images/1503591435324563456/foUrqiEw_400x400.jpg";
+    newTuit.stats = {
+        "comments": 0,
+        "retuits": 0,
+        "likes": 0
+    }
+
+
     tuits.push(newTuit);
     res.json(newTuit);
 }
