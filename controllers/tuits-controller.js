@@ -8,6 +8,7 @@ const createTuit = (req, res) => {
         "username": "Elon Musk"
     };
     newTuit.liked = false;
+    newTuit.disliked = false;
     newTuit.verified = false;
     newTuit.handle = "elonmusk";
     newTuit.time = "now";
@@ -15,7 +16,8 @@ const createTuit = (req, res) => {
     newTuit.stats = {
         "comments": 0,
         "retuits": 0,
-        "likes": 0
+        "likes": 0,
+        "dislikes":0
     }
 
 
